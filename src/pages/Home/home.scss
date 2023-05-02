@@ -1,0 +1,258 @@
+@import '/src/styles/variables.scss';
+
+.form{
+    width: 100%;
+    height: calc(100vh - 69px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &Border{
+        background: $gredient-secondary;
+        max-width: 470px;
+        width: 100%;
+        padding: 1px;
+        border-radius: 18px;
+    }
+    &Content{
+        padding: 79px 39px 47px;
+        border-radius: 18px;
+        background-color: $color-black-2;
+        position: relative;
+    }
+    &Logo{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin: 10px 10px 10px -35px ;
+        transform: translateY(-45px);
+        border-radius: 50%;
+        background-color: $color-black-1;
+        &Placeholder{
+            position: absolute;
+            width: 90px;
+            left: -10px;
+            bottom: -80px;
+            border-radius: 0 0 50% 50%;
+            display: block;
+            height: 90px;
+            border: 1px solid #46425E;
+            border-top: none;
+            background-color: $color-black-1;
+        }
+        &Bg{
+            position: relative;
+            &::after{
+                content: "";
+                position: absolute;
+                right: -18px;
+                width: 10px;
+                background: $color-black-1;
+                height: 53px;
+                top: -10px;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                left: -18px;
+                width: 10px;
+                background: $color-black-1;
+                height: 53px;
+                top: -10px;
+                z-index: 1;
+            }
+        }
+        &Container{
+            padding: 10px;
+            background-color: $color-blue-1;
+            border-radius: 50%;
+            position: relative;
+            &::before{
+                content: '';
+                width: 16px;
+                height: 11px;
+                position: absolute;
+                background: #0b0719;
+                border-top-right-radius: 12px;
+                left: -25px;
+                bottom: 24px;
+                border-top: 1px solid #46425E;
+                border-right: 1px solid #46425E;
+                z-index: 1;
+            }
+            &::after{
+                content: '';
+                width: 16px;
+                height: 11px;
+                position: absolute;
+                background: #0b0719;
+                border-top-left-radius: 12px;
+                right: -25px;
+                bottom: 24px;
+                border-top: 1px solid #46425E;
+                border-left: 1px solid #46425E;
+            }
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            display: block;
+        }
+    }
+    .modalSearch{
+        border: 1px solid rgba(110, 86, 248, 0.25);
+        position: relative;
+        border-radius: 30px;
+        margin-bottom: 16px;
+        img{
+            position: absolute;
+            display: block;
+            top: 12px;
+            left: 14px;
+        }
+        input{
+            padding: 11px 11px 10px 44px;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            width: 100%;
+            @include font-regular-14($line-height : 19px);
+            color: $color-grey-2;
+            &::placeholder{
+                @include font-regular-14($line-height : 19px);
+                color: $color-grey-2;
+            }
+        }
+    }
+    &Group{
+        &:not(:last-child){
+            padding-bottom: 24px;
+        }
+        label{
+            @include font-regular-14;
+            color: $color-white-1;
+            padding-bottom: 12px;
+            display: inline-block;
+            padding-left: 4px;
+        }
+    }
+    &Element{
+        padding-bottom: 18px;
+        @include flex-center;
+        justify-content: space-between;
+        label{
+            color: $color-white-2;
+            padding-bottom: 0;
+        }
+        span{
+            @include font-semibold-24;
+            color: $color-blue-0;
+        }
+    }
+    &Select{
+        padding: 18px 24px 17px 25px;
+        background-color: $color-blue-1;
+        border-radius: 10px;
+        @include flex-center;
+        justify-content: space-between;
+        cursor: pointer;
+        div{
+            @include flex-center;
+            gap: 9px;
+        }
+        p{
+            @include font-regular-16;
+            color: $color-white-0;
+        }
+    }
+    &AmountInput{
+        padding: 1px;
+        border-radius: 5px;
+        border: 1px solid rgba(110, 86, 248, 0.25);
+        position: relative;
+        input{
+            border-radius: 5px;
+        }
+        p{
+            @include font-regular-16;
+            color: $color-white-0;
+            position: absolute;
+            top: 18px;
+            right: 24px;
+        }
+    }
+    input{
+        padding: 15px 24px 14px 25px;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        width: 100%;
+        background-color: transparent;
+        @include font-semibold-22;
+        color: $color-white-0;
+        display: block;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+        }
+        &::placeholder{
+            @include font-semibold-22;
+            color: $color-grey-1;
+        }
+        &:disabled{
+            background-color: $color-blue-1;
+        }
+    }
+    button{
+        @include font-semibold-18;
+        color: $color-white-0;
+        padding: 12px 12px 11px;
+        outline: none;
+        border: none;
+        background: $gredient-primary;
+        border-radius: 30px;
+        width: 100%;
+        text-align: center;
+        margin-top: 26px;
+        cursor: pointer;
+    }
+    @media (max-width:768px){
+        padding: 20px;
+        &Content{
+            padding: 56px 12px 32px;
+        }
+        &Select{
+            padding: 14px 16px;
+            p{
+                font-size: 1.4rem;
+            }
+        }
+        &Group{
+            &:not(:last-child){
+                padding-bottom: 18px;
+            }
+        }
+        &AmountInput{
+            p{
+                right: 16px;
+                top: 14px;
+                font-size: 1.4rem;
+            }
+        }
+        input{
+            padding: 14px 16px;
+            font-size: 1.4rem;
+            &::placeholder{
+                font-size: 1.4rem;
+            }
+        }
+        label{
+            font-size: 1.2rem;
+        }
+        button{
+            margin-top: 18px;
+            font-size: 1.6rem;
+            line-height: 20px;
+            padding: 10px;
+        }
+    }
+}

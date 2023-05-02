@@ -1,0 +1,77 @@
+// Colors
+$color-white-0 : #ffffff;
+$color-white-1 : #DCDCEC;
+$color-white-2 : #C5C5C5;
+
+$color-black-0 : #000000;
+$color-black-1 : #040406;
+$color-black-2 : #0B0819;
+$color-black-3 : #0B081950;
+
+$color-grey-0 : #5A5A5A;
+$color-grey-1 : #6F6F7E;
+$color-grey-2 : #D2D2D2;
+
+$color-blue-0 : #627EEA;
+$color-blue-1 : #1C1731;
+$color-blue-2 : #181627;
+$color-blue-3 : #1B192D;
+
+$gredient-primary : linear-gradient(94.37deg, #3387D5 -5.94%, #7A06C9 115.34%);
+$gredient-secondary : linear-gradient(to bottom, #46425E, #00000000);
+$gredient-modal : linear-gradient(to bottom, #3B79D460, #00000000);
+
+
+// Mixins 
+@mixin flex-center {
+    display: flex;
+    align-items: center;   
+}
+
+// Regular font mixins
+@mixin font-regular-14($line-height : 21px) {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: $line-height;
+}
+
+@mixin font-regular-16($line-height : 24px) {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: $line-height;
+}
+
+
+// SemiBold font mixins
+@mixin font-semibold-16($line-height : 24px) {
+    font-weight: 600;
+    font-size: 1.6rem;
+    line-height: $line-height;
+}
+
+@mixin font-semibold-18($line-height : 27px) {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: $line-height;
+}
+
+@mixin font-semibold-22($line-height : 142%) {
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: $line-height;
+}
+
+
+@mixin font-semibold-24($line-height : 36px) {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: $line-height;
+}
+
+
+// Bold font mixins
+@mixin font-bold-16($line-height : 16px) {
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: $line-height;
+}

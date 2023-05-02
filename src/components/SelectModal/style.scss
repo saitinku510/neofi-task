@@ -1,0 +1,78 @@
+@import '/src/styles/variables.scss';
+
+.modal{
+    width: 100%;
+    height: 100vh;
+    background-color: $color-black-3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include flex-center;
+    justify-content: center;
+    padding: 20px;
+    &Container{
+        max-width: 410px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1px;
+        background: $gredient-modal;
+        border-radius: 18px;
+        position: relative;
+    }
+    .close{
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        cursor: pointer;
+    }
+    &Content{
+        padding: 49px 44px 65px;
+        border-radius: 18px;
+        background-color: $color-blue-2;
+    }
+    ul{
+        max-height: 310px;
+        overflow-y: overlay;
+    }
+    li{
+        @include flex-center;
+        gap: 14px;
+        @include font-regular-14;
+        color: $color-white-0;
+        padding: 10px 16px;
+        cursor: pointer;
+        border-radius: 2px;
+        position: relative;
+        img{
+            width: 24px;
+            height: 24px;
+        }
+        &::after{
+            position: absolute;
+            top: 14px;
+            right: 16px;
+        }
+        &:hover{
+            background-color: $color-blue-3;
+            &::after{
+                content: url(../../assets/images/tick.svg);
+            }
+        }
+        &:not(:last-child){
+            margin-bottom: 4px;
+        }
+    }
+    @media (max-width:768px){
+        &Content{
+            padding: 49px 12px 32px;
+        }
+        li{
+            gap: 8px;
+            padding:  8px;
+            img{
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
